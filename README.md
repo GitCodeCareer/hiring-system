@@ -44,7 +44,7 @@ One important rule all the project and also all Hakctoberfest - "Just try!",  if
 - ISSUES
 - PULL
 - NEXT-TASK
-- CHART/GRAPH
+- CHART-GRAPH
 - COMMENTED-ADVANCED-CODE-TEMPLATE
 
 ### Problem solving
