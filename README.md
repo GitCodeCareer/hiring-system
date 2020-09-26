@@ -23,4 +23,4 @@ Project stages here
 - Stars will give you basic information about how many people participate in the project
 
 ### RTFM or Read The F##king Manual
- Read the manual -  will try to collect on the readme all links and information about Project and also how you must participate in this project.  good templates for ISSUES lights temple Leeds  for MERGE request
+Read the manual -  will try to collect on the readme all links and information about Project and also how you must participate in this project.  good templates for ISSUES lights temple Leeds  for MERGE request
