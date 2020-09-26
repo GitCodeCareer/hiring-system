@@ -24,3 +24,5 @@ Project stages here
 
 ### RTFM or Read The F##king Manual
 Read the manual -  will try to collect on the readme all links and information about Project and also how you must participate in this project.  good templates for ISSUES lights temple Leeds  for MERGE request
+### Just try
+One important rule all the project and also all Hakctoberfest - "Just try!",  if you're not sure you fit this project - "just try!"  Don't worry to feel stupid, don't worry to ask stupid question,  and try less worry. This project is not something extra important and you must accept this as a game.  you try to play a game to be a developer,  we all do mistakes,  we all are something not understanding.  the it world is very frequently  change  amend and improve, for that reason all information constantly changing and during web development and any other development we constantly learning. Main headline of this project "just try it, just learn it",  nobody will punching you in the face, and the most important you will learn a lot of new things as we all.
