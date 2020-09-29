@@ -1,10 +1,10 @@
-![](https://imgur.com/XfWN92H)
-<img src="https://imgur.com/XfWN92H" />
+![](/img/building.jpg)
 
 #Learn & Play REST (hacktoberfest open source)
 CodeCareer.io's open source project during Hacktoberfest
 
 ## Open source REST test system front-end & back-end
+
 Hello guys, girls and rainbow unicorns writing front-end and back-end for very very basic REST system what will also fit to any of your project in the future so you building very basic front-end and back-end what do you can use later on in your project
 
 This project exist to learn in improve skills of any participant and give overall picture how front-end and back-end working by rest request.
@@ -20,22 +20,29 @@ How to do push requests we've got this treat
 Project stages here
 
 ## Start
+
 ### How-to-Start
+
 1. Fork, Star and Watch
-  - First step will give you cloned repo to your account,  you will be informed about  all actions  happened  in the  base Github repo.
-  - Stars will give you basic information about how many people participate in the project
+
+- First step will give you cloned repo to your account, you will be informed about all actions happened in the base Github repo.
+- Stars will give you basic information about how many people participate in the project
+
 2. Just try, Read the issue
 3. Solve Problem
 4. Take over
 5. Pull!
 
 ### RTFM or Read The F##king Manual
-Read the manual -  will try to collect on the readme all links and information about Project and also how you must participate in this project, templates for ISSUE, PULL etc...
+
+Read the manual - will try to collect on the readme all links and information about Project and also how you must participate in this project, templates for ISSUE, PULL etc...
 
 ### Just try
-One important rule all the project and also all Hakctoberfest - "Just try!",  if you're not sure you fit this project - "just try!"  Don't worry to feel stupid, don't worry to ask stupid question,  and try less worry. This project is not something extra important and you must accept this as a game.  you try to play a game to be a developer,  we all do mistakes,  we all are something not understanding.  the it world is very frequently  change  amend and improve, for that reason all information constantly changing and during web development and any other development we constantly learning. Main headline of this project "just try it, just learn it",  nobody will punching you in the face, and the most important you will learn a lot of new things as we all.
+
+One important rule all the project and also all Hakctoberfest - "Just try!", if you're not sure you fit this project - "just try!" Don't worry to feel stupid, don't worry to ask stupid question, and try less worry. This project is not something extra important and you must accept this as a game. you try to play a game to be a developer, we all do mistakes, we all are something not understanding. the it world is very frequently change amend and improve, for that reason all information constantly changing and during web development and any other development we constantly learning. Main headline of this project "just try it, just learn it", nobody will punching you in the face, and the most important you will learn a lot of new things as we all.
 
 ## 5 STEPS Participation Process
+
 0. (Fork, Star and Watch) and Read this manual.
 1. Read issue
 2. Solve Problem
@@ -44,6 +51,7 @@ One important rule all the project and also all Hakctoberfest - "Just try!",  if
 5. Push merge request
 
 ### Templates
+
 - ISSUES
 - PULL
 - NEXT-TASK
@@ -51,6 +59,7 @@ One important rule all the project and also all Hakctoberfest - "Just try!",  if
 - COMMENTED-ADVANCED-CODE-TEMPLATE
 
 ### Problem solving
+
 - Solve problem using simplest and basic features
 - If you know - `Super Cool Latest Advanced method` - comment your supercode down (in proj file) below using COMMENTED-ADVANCED-CODE-TEMPLATE
 - If you on stage of optimization and see commented supercode, write
