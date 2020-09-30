@@ -20,7 +20,7 @@ For issues(also issue Template )with got this treat
 
 How to do push requests we've got this treat
 
-Project stages here
+Project stages here [CURRENT-STAGE](/hacktoberfest--hiring-system/CURRENT-STAGE.md)
 
 ## Start
 
@@ -36,7 +36,7 @@ Project stages here
 
 ### RTFM or Read The F##king Manual
 
-Read the manual - will try to collect on the readme all links and information about Project and also how you must participate in this project, templates for ISSUE, PULL etc...
+Read the manual - will try to collect on the readme all links and information about Project and also how you must participate in this project, templates for [ISSUES](/hacktoberfest--hiring-system/ISSUES.md), [PULL](/hacktoberfest--hiring-system/PULL.md), [NEXT-TASK](/hacktoberfest--hiring-system/NEXT-TASK), [CHART-GRAPH](/hacktoberfest--hiring-system/CHART-GRAPH.md), [COMMENTED-ADVANCED-CODE-TEMPLATE](/hacktoberfest--hiring-system/COMMENTED-ADVANCED-CODE-TEMPLATE.md)
 
 ### Just try
 
