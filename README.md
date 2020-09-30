@@ -1,5 +1,8 @@
 ![](/img/building.jpg)
 
+#### Please view our open source and organization principles before contributing. https://github.com/GitCodeCareer/open-source
+#### If you have any questions, we’re avalible via Twitter @gitcodecareer
+
 #Learn & Play REST (hacktoberfest open source)
 CodeCareer.io's open source project during Hacktoberfest
 
