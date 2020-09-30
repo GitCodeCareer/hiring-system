@@ -27,10 +27,8 @@ Project stages here
 ### How-to-Start
 
 1. Fork, Star and Watch
-
-- First step will give you cloned repo to your account, you will be informed about all actions happened in the base Github repo.
-- Stars will give you basic information about how many people participate in the project
-
+  - First step will give you cloned repo to your account, you will be informed about all actions happened in the base Github repo.
+  - Stars will give you basic information about how many people participate in the project
 2. Just try, Read the issue
 3. Solve Problem
 4. Take over
