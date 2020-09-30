@@ -53,11 +53,11 @@ One important rule all the project and also all Hakctoberfest - "Just try!", if 
 
 ### Templates
 
-- ISSUES
-- PULL
-- NEXT-TASK
-- CHART-GRAPH
-- COMMENTED-ADVANCED-CODE-TEMPLATE
+- [ISSUES](/hacktoberfest--hiring-system/ISSUES.md)
+- [PULL](/hacktoberfest--hiring-system/PULL.md)
+- [NEXT-TASK](/hacktoberfest--hiring-system/NEXT-TASK)
+- [CHART-GRAPH](/hacktoberfest--hiring-system/CHART-GRAPH.md)
+- [COMMENTED-ADVANCED-CODE-TEMPLATE](/hacktoberfest--hiring-system/COMMENTED-ADVANCED-CODE-TEMPLATE.md)
 
 ### Problem solving
 
