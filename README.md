@@ -36,7 +36,7 @@ Project stages here [CURRENT-STAGE](./blob/master/CURRENT-STAGE.md)
 
 ### RTFM or Read The F##king Manual
 
-Read the manual - will try to collect on the readme all links and information about Project and also how you must participate in this project, templates for [ISSUES](./ISSUES.md), [PULL](./PULL.md), [NEXT-TASK](./NEXT-TASK), [CHART-GRAPH](./CHART-GRAPH.md), [COMMENTED-ADVANCED-CODE-TEMPLATE](./COMMENTED-ADVANCED-CODE-TEMPLATE.md)
+Read the manual - will try to collect on the readme all links and information about Project and also how you must participate in this project, templates for [ISSUES](./ISSUES.md), [PULL](./PULL.md), [NEXT-TASK](./NEXT-TASK.md), [CHART-GRAPH](./CHART-GRAPH.md), [COMMENTED-ADVANCED-CODE-TEMPLATE](./COMMENTED-ADVANCED-CODE-TEMPLATE.md)
 
 ### Just try
 
@@ -55,12 +55,12 @@ One important rule all the project and also all Hakctoberfest - "Just try!", if 
 
 - [ISSUES](./ISSUES.md)
 - [PULL](./PULL.md)
-- [NEXT-TASK](./NEXT-TASK)
+- [NEXT-TASK](./NEXT-TASK.md)
 - [CHART-GRAPH](./CHART-GRAPH.md)
 - [COMMENTED-ADVANCED-CODE-TEMPLATE](./COMMENTED-ADVANCED-CODE-TEMPLATE.md)
 
 ### Problem solving
 
 - Solve problem using simplest and basic features
-- If you know - `Super Cool Latest Advanced method` - comment your supercode down (in proj file) below using COMMENTED-ADVANCED-CODE-TEMPLATE
+- If you know - `Super Cool Latest Advanced method` - comment your supercode down (in proj file) below using [COMMENTED-ADVANCED-CODE-TEMPLATE](./COMMENTED-ADVANCED-CODE-TEMPLATE.md)
 - If you on stage of optimization and see commented supercode, write
