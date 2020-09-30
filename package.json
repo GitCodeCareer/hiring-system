@@ -1,0 +1,44 @@
+{
+  "name": "hacktoberfest--hiring-system",
+  "version": "1.0.0",
+  "description": "CodeCareer.io's open source project during Hacktoberfest",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "reactstrap": "^8.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-function-bind": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "serve": "node src/backend/main.js",
+    "watch": "webpack --mode=development -d --watch",
+    "build": "webpack --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitCodeCareer/hacktoberfest--hiring-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GitCodeCareer/hacktoberfest--hiring-system/issues"
+  },
+  "homepage": "https://github.com/GitCodeCareer/hacktoberfest--hiring-system#readme"
+}
