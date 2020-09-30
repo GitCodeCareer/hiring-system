@@ -15,10 +15,20 @@
 
 ### Issue Template
 ```markdown
-- Add compare function
-[ ] /src/compare.js
-[ ] any name
+### Add Feature
+- Add compare function to
+[ ] /server/tools/compare.js
+[ ] Give correspond name to your function
+[ ] Test it
 
+#### Description of "compare function feature"
 - Solving comparation of two values.
+- Helps ...something to solve...
+- Default parameters
+- Usage
+  - compare(arg, arg)
+  - compare([args])
+  - compare({args})
 
+#### Cover issue <number>
   ```
