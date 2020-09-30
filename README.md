@@ -20,7 +20,7 @@ For issues(also issue Template )with got this treat
 
 How to do push requests we've got this treat
 
-Project stages here [CURRENT-STAGE](/hacktoberfest--hiring-system/CURRENT-STAGE.md)
+Project stages here [CURRENT-STAGE](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/CURRENT-STAGE.md)
 
 ## Start
 
@@ -36,7 +36,7 @@ Project stages here [CURRENT-STAGE](/hacktoberfest--hiring-system/CURRENT-STAGE.
 
 ### RTFM or Read The F##king Manual
 
-Read the manual - will try to collect on the readme all links and information about Project and also how you must participate in this project, templates for [ISSUES](/hacktoberfest--hiring-system/ISSUES.md), [PULL](/hacktoberfest--hiring-system/PULL.md), [NEXT-TASK](/hacktoberfest--hiring-system/NEXT-TASK), [CHART-GRAPH](/hacktoberfest--hiring-system/CHART-GRAPH.md), [COMMENTED-ADVANCED-CODE-TEMPLATE](/hacktoberfest--hiring-system/COMMENTED-ADVANCED-CODE-TEMPLATE.md)
+Read the manual - will try to collect on the readme all links and information about Project and also how you must participate in this project, templates for [ISSUES](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/ISSUES.md), [PULL](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/PULL.md), [NEXT-TASK](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/NEXT-TASK), [CHART-GRAPH](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/CHART-GRAPH.md), [COMMENTED-ADVANCED-CODE-TEMPLATE](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/COMMENTED-ADVANCED-CODE-TEMPLATE.md)
 
 ### Just try
 
@@ -53,11 +53,11 @@ One important rule all the project and also all Hakctoberfest - "Just try!", if 
 
 ### Templates
 
-- [ISSUES](/hacktoberfest--hiring-system/ISSUES.md)
-- [PULL](/hacktoberfest--hiring-system/PULL.md)
-- [NEXT-TASK](/hacktoberfest--hiring-system/NEXT-TASK)
-- [CHART-GRAPH](/hacktoberfest--hiring-system/CHART-GRAPH.md)
-- [COMMENTED-ADVANCED-CODE-TEMPLATE](/hacktoberfest--hiring-system/COMMENTED-ADVANCED-CODE-TEMPLATE.md)
+- [ISSUES](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/ISSUES.md)
+- [PULL](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/PULL.md)
+- [NEXT-TASK](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/NEXT-TASK)
+- [CHART-GRAPH](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/CHART-GRAPH.md)
+- [COMMENTED-ADVANCED-CODE-TEMPLATE](https://github.com/GitCodeCareer/hacktoberfest--hiring-system/blob/master/hacktoberfest--hiring-system/COMMENTED-ADVANCED-CODE-TEMPLATE.md)
 
 ### Problem solving
 
