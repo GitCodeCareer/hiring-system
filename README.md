@@ -36,7 +36,7 @@ Project stages here [CURRENT-STAGE](./blob/master/CURRENT-STAGE.md)
 
 ### RTFM or Read The F##king Manual
 
-Read the manual - will try to collect on the readme all links and information about Project and also how you must participate in this project, templates for [ISSUES](./blob/master/ISSUES.md), [PULL](./blob/master/PULL.md), [NEXT-TASK](./blob/master/NEXT-TASK), [CHART-GRAPH](./blob/master/CHART-GRAPH.md), [COMMENTED-ADVANCED-CODE-TEMPLATE](./blob/master/COMMENTED-ADVANCED-CODE-TEMPLATE.md)
+Read the manual - will try to collect on the readme all links and information about Project and also how you must participate in this project, templates for [ISSUES](./../../ISSUES.md), [PULL](./../../PULL.md), [NEXT-TASK](./../../NEXT-TASK), [CHART-GRAPH](./../../CHART-GRAPH.md), [COMMENTED-ADVANCED-CODE-TEMPLATE](./../../COMMENTED-ADVANCED-CODE-TEMPLATE.md)
 
 ### Just try
 
@@ -53,11 +53,11 @@ One important rule all the project and also all Hakctoberfest - "Just try!", if 
 
 ### Templates
 
-- [ISSUES](./blob/master/ISSUES.md)
-- [PULL](./blob/master/PULL.md)
-- [NEXT-TASK](./blob/master/NEXT-TASK)
-- [CHART-GRAPH](./blob/master/CHART-GRAPH.md)
-- [COMMENTED-ADVANCED-CODE-TEMPLATE](./blob/master/COMMENTED-ADVANCED-CODE-TEMPLATE.md)
+- [ISSUES](./../../ISSUES.md)
+- [PULL](./../../PULL.md)
+- [NEXT-TASK](./../../NEXT-TASK)
+- [CHART-GRAPH](./../../CHART-GRAPH.md)
+- [COMMENTED-ADVANCED-CODE-TEMPLATE](./../../COMMENTED-ADVANCED-CODE-TEMPLATE.md)
 
 ### Problem solving
 
