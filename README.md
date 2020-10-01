@@ -1,4 +1,4 @@
-![](/img/progress.jpg)
+![](/img/progress.png)
 
 #### Please view our open source and organization principles before contributing. https://github.com/GitCodeCareer/open-source
 
