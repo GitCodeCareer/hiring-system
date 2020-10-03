@@ -13,7 +13,7 @@ const listOfJob = [
   {
     id: '1',
     title: 'Senior backend developer',
-    company: 'Goggle.inc',
+    company: 'Google.inc',
     location: 'Addison',
     jobType: "Full-time",
     date: '20, Sept 2020',
@@ -21,7 +21,7 @@ const listOfJob = [
   {
     id: '2',
     title: 'Senior backend developer',
-    company: 'Goggle.inc',
+    company: 'Google.inc',
     location: 'Berkeley County',
     jobType: "Full-time",
     date: '20, Sept 2020',
@@ -29,7 +29,7 @@ const listOfJob = [
   {
     id: '3',
     title: 'Senior backend developer',
-    company: 'Goggle.inc',
+    company: 'Google.inc',
     location: 'Cambridge',
     jobType: "Full-time",
     date: '20, Sept 2020',
@@ -37,7 +37,7 @@ const listOfJob = [
   {
     id: '4',
     title: 'Senior backend developer',
-    company: 'Goggle.inc',
+    company: 'Google.inc',
     location: 'Chandler',
     jobType: "Full-time",
     date: '20, Sept 2020',
@@ -45,7 +45,7 @@ const listOfJob = [
   {
     id: '5',
     title: 'Senior backend developer',
-    company: 'Goggle.inc',
+    company: 'Google.inc',
     location: 'Clarksville',
     jobType: "Full-time",
     date: '20, Sept 2020',
@@ -53,7 +53,7 @@ const listOfJob = [
   {
     id: '6',
     title: 'Senior backend developer',
-    company: 'Goggle.inc',
+    company: 'Google.inc',
     location: 'Detroit',
     jobType: "Full-time",
     date: '20, Sept 2020',
@@ -61,7 +61,7 @@ const listOfJob = [
   {
     id: '7',
     title: 'Senior backend developer',
-    company: 'Goggle.inc',
+    company: 'Google.inc',
     location: 'Dallas',
     jobType: "Full-time",
     date: '20, Sept 2020',
