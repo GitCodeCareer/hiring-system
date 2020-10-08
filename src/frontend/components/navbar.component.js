@@ -54,12 +54,12 @@ class NavbarComponent extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
-            <Link to="/register">
-              <NavLink>Register</NavLink>
-            </Link>
-            <Link to="/login">
-              <NavLink>Login</NavLink>
-            </Link>
+            <NavLink tag={Link} to="/register">
+              Register
+            </NavLink>
+            <NavLink tag={Link} to="/login">
+              Login
+            </NavLink>
           </Collapse>
         </Navbar>
       </div>
