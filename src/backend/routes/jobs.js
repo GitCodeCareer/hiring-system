@@ -5,6 +5,7 @@ const jobsRouter = Router();
 
 jobsRouter.get('/:jobId', jobsController.getJobById);
 jobsRouter.post('/', jobsController.createJob);
+jobsRouter.patch('/:jobId', jobsController.editJobById);
 jobsRouter.get('/', jobsController.listJobs);
 
 module.exports = jobsRouter;

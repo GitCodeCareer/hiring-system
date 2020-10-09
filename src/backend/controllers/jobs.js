@@ -111,3 +111,25 @@ module.exports.createJob = (req, res) => {
   listOfJob.push(job);
   res.json(job);
 };
+
+module.exports.editJobById = (req, res) => {
+  const { jobId } = req.params;
+  const { title, company, location, jobType, date } = req.body;
+  if (!jobId) {
+    return res.status(400).json({
+      error: 'Job id parameter required',
+    });
+  }
+  const job = listOfJob.find((job) => job.id === jobId);
+  if (!job) {
+    return res.status(404).json({
+      error: 'Job not found',
+    });
+  }
+  job.title = title;
+  job.company = company;
+  job.location = location;
+  job.jobType = jobType;
+  job.date = date;
+  res.json(job);
+};
