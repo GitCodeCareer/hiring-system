@@ -84,3 +84,19 @@ const listOfJob = [
 module.exports.listJobs = async (req, res) => {
   return res.json(listOfJob);
 };
+
+module.exports.getJobById = async (req, res) => {
+  const { jobId } = req.params;
+  if (!jobId) {
+    return res.status(400).json({
+      error: 'Job id parameter required',
+    });
+  }
+  const job = listOfJob.find((job) => job.id === jobId);
+  if (!job) {
+    return res.status(404).json({
+      error: 'Job not found',
+    });
+  }
+  return res.status(200).json(job);
+};
