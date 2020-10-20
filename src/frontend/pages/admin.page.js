@@ -30,9 +30,9 @@ const AdminPanel = ()=>{
                         <td>@mdo</td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary mr-3">Edit</button>
-                            <button type="button" class="btn btn-secondary mr-3">View</button>
-                            <button type="button" class="btn btn-danger mr-3">Delete</button>
+                            <button type="button" className="btn btn-primary mr-3">Edit</button>
+                            <button type="button" className="btn btn-secondary mr-3">View</button>
+                            <button type="button" className="btn btn-danger mr-3">Delete</button>
                             </div>
                         </td>
                     </tr>
@@ -43,9 +43,9 @@ const AdminPanel = ()=>{
                         <td>@fat</td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary mr-3">Edit</button>
-                            <button type="button" class="btn btn-secondary mr-3">View</button>
-                            <button type="button" class="btn btn-danger mr-3">Delete</button>
+                            <button type="button" className="btn btn-primary mr-3">Edit</button>
+                            <button type="button" className="btn btn-secondary mr-3">View</button>
+                            <button type="button" className="btn btn-danger mr-3">Delete</button>
                             </div>
                         </td>
                     </tr>
@@ -56,9 +56,9 @@ const AdminPanel = ()=>{
                         <td>@twitter</td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary mr-3">Edit</button>
-                            <button type="button" class="btn btn-secondary mr-3">View</button>
-                            <button type="button" class="btn btn-danger mr-3">Delete</button>
+                            <button type="button" className="btn btn-primary mr-3">Edit</button>
+                            <button type="button" className="btn btn-secondary mr-3">View</button>
+                            <button type="button" className="btn btn-danger mr-3">Delete</button>
                             </div>
                         </td>
                     </tr>
