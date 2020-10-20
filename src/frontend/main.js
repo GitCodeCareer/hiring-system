@@ -7,6 +7,7 @@ import RegisterPage from './pages/register.page';
 import ApplyPage from './pages/apply.page';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/global.css';
+import AdminPanel from './pages/admin.page';
 
 render(
   <Router>
@@ -15,6 +16,8 @@ render(
     <Route path="/jobs" component={JobsPage} exact />
     <Route path="/apply" component={ApplyPage} />
     <Route path="/" component={JobsPage} exact />
+    <Route path="/admin" component={AdminPanel} exact />
+
   </Router>,
   document.getElementById('root-app')
 );
