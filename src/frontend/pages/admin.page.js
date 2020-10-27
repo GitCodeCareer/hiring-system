@@ -1,18 +1,19 @@
 import React ,{useState} from "react"
 import {Link} from "react-router-dom"
 import Navbar from '../components/navbar.component';
+import '../styles/admintable.style.css';
 
 const AdminPanel = ()=>{
     return(
     <div>
         <Navbar />
-        <div className="container-fluid">
-            <div className="card mt-5 ml-5 mr-5">
+        <div className="mt-4 mb-4 container-fluid col-md-offset-2 col-md-10">
+            <div className="card mt-5 ml-2 mr-2 ">
                 <div className="card-header">
                 Admin - Job Listing
                 </div>
-                <div className="card-body">
-                    <table className="table table-striped">
+                <div className="mt-3">
+                    <table className="table table-striped table">
                         <thead>
                             <tr className="table-active">
                                 <th scope="col">#</th>
@@ -32,7 +33,7 @@ const AdminPanel = ()=>{
                             <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" className="btn btn-primary mr-3">Edit</button>
                             <button type="button" className="btn btn-secondary mr-3">View</button>
-                            <button type="button" className="btn btn-danger mr-3">Delete</button>
+                            <button type="button" className="btn btn-danger">Delete</button>
                             </div>
                         </td>
                     </tr>
@@ -45,7 +46,7 @@ const AdminPanel = ()=>{
                             <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" className="btn btn-primary mr-3">Edit</button>
                             <button type="button" className="btn btn-secondary mr-3">View</button>
-                            <button type="button" className="btn btn-danger mr-3">Delete</button>
+                            <button type="button" className="btn btn-danger">Delete</button>
                             </div>
                         </td>
                     </tr>
@@ -58,7 +59,7 @@ const AdminPanel = ()=>{
                             <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" className="btn btn-primary mr-3">Edit</button>
                             <button type="button" className="btn btn-secondary mr-3">View</button>
-                            <button type="button" className="btn btn-danger mr-3">Delete</button>
+                            <button type="button" className="btn btn-danger">Delete</button>
                             </div>
                         </td>
                     </tr>
