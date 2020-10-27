@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^4.5.2",
+    "concurrently": "^5.3.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "react": "^16.13.1",
@@ -26,6 +27,7 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
+    "start": "concurrently \"nodemon src/backend/server.js\" \"webpack --mode=development -d --watch\"",
     "server": "nodemon src/backend/server.js",
     "watch": "webpack --mode=development -d --watch",
     "build": "webpack --mode=production",
