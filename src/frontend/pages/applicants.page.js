@@ -1,57 +1,60 @@
 import React from "react";
 import { Jumbotron, Container } from "reactstrap";
-
-import { Card, Button, CardTitle, CardText, Row, Col, Table } from "reactstrap";
+import { Card, CardTitle, CardText, Row, Col } from "reactstrap";
 import { ButtonToggle } from "reactstrap";
+import { listOfApplicants } from "../data/applicants";
+
 const ApplicantsPage = () => {
   return (
-    <div className="container mt-4">
-      <Jumbotron fluid>
+    <div className="container mt-4 mb-4">
+      <Jumbotron fluid className="border-bottom rounded-top">
         <Container fluid>
           <h1 className="display-5">Applicants</h1>
-          <p className="lead float-right">
+          <p className="lead float-right font-weight-bold">
             <strong>Position</strong>: Senior Developer
           </p>
         </Container>
       </Jumbotron>
       <div>
         <Row>
-          <Col sm="6 mt-3">
-            <Card body>
-              <CardTitle>
-                <h3>Alex Hales</h3>
-                <hr />
-              </CardTitle>
+          {listOfApplicants.map((applicant) => (
+            <Col sm="6 mt-4" key={applicant.id}>
+              <Card body>
+                <CardTitle>
+                  <h3>{applicant.name}</h3>
+                  <hr />
+                </CardTitle>
 
-              <CardText>
-                <Row className="mt-2">
-                  <Col sm="6">
-                    <strong>Email:</strong>
-                  </Col>
-                  <Col>alex71@gmail.com</Col>
-                </Row>
-                <Row className="mt-2">
-                  <Col sm="6">
-                    <strong>Contact:</strong>
-                  </Col>
-                  <Col>789456123</Col>
-                </Row>
-                <Row className="mt-2">
-                  <Col sm="6">
-                    <strong>Time Zone</strong>
-                  </Col>
-                  <Col>(GMT -7:00) Mountain Time(US & Canada)</Col>
-                </Row>
-                <Row className="mt-2">
-                  <Col sm="6">
-                    <strong>Availibility</strong>
-                  </Col>
-                  <Col>8:00 - 18:00</Col>
-                </Row>
-              </CardText>
-              <ButtonToggle color="primary">View Resume</ButtonToggle>
-            </Card>
-          </Col>
+                <CardText>
+                  <Row className="mt-2">
+                    <Col sm="6">
+                      <strong>Email:</strong>
+                    </Col>
+                    <Col>{applicant.email}</Col>
+                  </Row>
+                  <Row className="mt-2">
+                    <Col sm="6">
+                      <strong>Contact:</strong>
+                    </Col>
+                    <Col>7{applicant.contact}</Col>
+                  </Row>
+                  <Row className="mt-2">
+                    <Col sm="6">
+                      <strong>Time Zone</strong>
+                    </Col>
+                    <Col>{applicant.timeZone}</Col>
+                  </Row>
+                  <Row className="mt-2">
+                    <Col sm="6">
+                      <strong>Availibility</strong>
+                    </Col>
+                    <Col>{applicant.availability}</Col>
+                  </Row>
+                </CardText>
+                <ButtonToggle color="primary">View Resume</ButtonToggle>
+              </Card>
+            </Col>
+          ))}
         </Row>
       </div>
     </div>

@@ -1,4 +1,4 @@
-export const applicants = [
+export const listOfApplicants = [
   {
     id: 1,
     name: "Filiberto Collier",
