@@ -5,7 +5,12 @@
 ![](/img/progress.png)
 
 ## Working Endpoints
-- http://localhost:5000/api/v1/jobs/
+
+- Get All - http://localhost:5000/api/v1/jobs/
+- Get by ID - http://localhost:5000/api/v1/jobs/ID_PLACE_HOLDER
+- Create new Job - http://localhost:5000/api/v1/jobs/new
+- Delete by ID - http://localhost:5000/api/v1/jobs/ID_PLACE_HOLDER
+- Update by ID - http://localhost:5000/api/v1/jobs/ID_PLACE_HOLDER
 
 ## Before Participating
 
@@ -14,7 +19,28 @@
 
 ## Participating
 
-### How-to-Start
+### Setting to Project up
+
+- Download repo clone
+- Install dependencies
+- Setup any database connections in an .env
+
+To start the development environment run:
+
+```
+npm run start
+```
+
+- Frontend will be running on port 8080 by default
+- Backend API will be running on port 5000 by default
+
+To view the frontend go to:
+http://localhost:8080/src/backend/public/
+
+Backend Endpoints:
+http://localhost:5000/api/v1/jobs/
+
+### How-to-Start Contributing
 
 1. Fork, Star and Watch
 
