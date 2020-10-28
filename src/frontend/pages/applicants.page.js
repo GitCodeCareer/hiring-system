@@ -1,7 +1,16 @@
 import React from "react";
-import { Jumbotron, Container } from "reactstrap";
-import { Card, CardTitle, CardText, Row, Col } from "reactstrap";
-import { ButtonToggle } from "reactstrap";
+//Reactstrap Components
+import {
+  Jumbotron,
+  Container,
+  Card,
+  CardTitle,
+  CardText,
+  Row,
+  Col,
+  ButtonToggle,
+} from "reactstrap";
+//Data
 import { listOfApplicants } from "../data/applicants";
 
 const ApplicantsPage = () => {
@@ -17,6 +26,7 @@ const ApplicantsPage = () => {
       </Jumbotron>
       <div>
         <Row>
+          {/* Map through all the data */}
           {listOfApplicants.map((applicant) => (
             <Col sm="6 mt-4" key={applicant.id}>
               <Card body>
@@ -55,6 +65,7 @@ const ApplicantsPage = () => {
               </Card>
             </Col>
           ))}
+          {/* end of data mapping */}
         </Row>
       </div>
     </div>
