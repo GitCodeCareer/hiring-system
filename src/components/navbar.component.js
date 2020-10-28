@@ -60,6 +60,9 @@ class NavbarComponent extends Component {
             <NavLink tag={Link} to="/login">
               Login
             </NavLink>
+            <NavLink tag={Link} to="/admin">
+              Admin
+            </NavLink>
           </Collapse>
         </Navbar>
       </div>

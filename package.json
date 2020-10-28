@@ -12,7 +12,12 @@
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "reactstrap": "^8.6.0"
+    "reactstrap": "^8.6.0",
+    "@testing-library/jest-dom": "^5.11.5",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react-scripts": "4.0.0",
+    "web-vitals": "^0.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -28,10 +33,10 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "start": "concurrently \"nodemon src/backend/server.js\" \"webpack-dev-server --open --mode development\"",
+    "start": "concurrently \"nodemon src/backend/server.js\" \"npm run watch\"",
     "server": "nodemon src/backend/server.js",
-    "watch": "webpack --mode=development -d --watch",
-    "build": "webpack --mode=production",
+    "watch": "react-scripts start",
+    "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -44,5 +49,22 @@
   "bugs": {
     "url": "https://github.com/GitCodeCareer/hacktoberfest--hiring-system/issues"
   },
-  "homepage": "https://github.com/GitCodeCareer/hacktoberfest--hiring-system#readme"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

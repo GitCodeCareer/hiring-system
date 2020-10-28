@@ -103,5 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
-# Bundled Front-end Code
-bundle.js
+# Built Front-end Code
+build/
