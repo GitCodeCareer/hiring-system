@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # Bundled Front-end Code
-public/js/bundle.js
+bundle.js
