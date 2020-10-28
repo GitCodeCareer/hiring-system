@@ -11,7 +11,25 @@
 
 ## Participating
 
-### How-to-Start
+### Setting to Project up
+
+- Download repo clone
+- Install dependencies
+- Setup any database connections in an .env
+
+To start the development environment run:
+
+```
+npm run start
+```
+
+- Frontend will be running on port 8080 by default
+- Backend API will be running on port 5000 by default
+
+To view the frontend go to:
+http://localhost:8080/src/backend/public/
+
+### How-to-Start Contributing
 
 1. Fork, Star and Watch
 

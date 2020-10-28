@@ -1,7 +1,10 @@
 const express = require("express");
 const apiRouter = require("./routes");
+const { Router } = require('express');
 const morgan = require("morgan");
 const logger = require("./middleware/requestLogger");
+
+const router = Router();
 
 // Init Express
 const app = express();
@@ -15,14 +18,11 @@ if (process.env.NODE_ENV === "development") {
   app.use(logger);
 }
 
-// Define Routes
+// Static Routes
+app.use(express.static('public'));
+
+// Define API Routes
 app.use("/api/v1/", apiRouter);
-
-app.use("/static", express.static(path.join(`${__dirname}/public`)));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(`${__dirname}/public/index.html`));
-});
 
 // Ports
 const PORT = process.env.PORT || 5000;
