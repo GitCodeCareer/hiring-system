@@ -2,7 +2,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const BUILD_DIR = path.resolve(__dirname, 'src/backend/public/js');
+const BUILD_DIR = path.resolve(__dirname, 'src/frontend/public/js');
 const APP_DIR = path.resolve(__dirname, 'src/frontend');
 
 const config = {

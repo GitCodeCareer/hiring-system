@@ -45,7 +45,7 @@ npm run start
 ```
 
 To view the frontend go to:
-http://localhost:8080/src/backend/public/
+http://localhost:8080/src/frontend/public/
 Note: you may need to go to the root directory (http://localhost:8080/) and navigate to the public directory to get the views to load.
 
 Backend Endpoints:
