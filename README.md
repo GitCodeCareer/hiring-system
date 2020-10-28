@@ -32,26 +32,13 @@
 - Install dependencies
 - Setup any database connections in an .env
 
-Build the front-end bundle
-
-```
-npm run build
-```
-
 To start the development environment run:
 
 ```
 npm run start
 ```
 
-To view the frontend go to:
-http://localhost:8080/src/frontend/public/
-Note: you may need to go to the root directory (http://localhost:8080/) and navigate to the public directory to get the views to load.
-
-Backend Endpoints:
-http://localhost:5000/api/v1/jobs/
-
-- Frontend will be running on port 8080 by default
+- Frontend will be running on port 3000 by default
 - Backend API will be running on port 5000 by default
 
 ### How-to-Start Contributing
