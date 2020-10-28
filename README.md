@@ -4,6 +4,14 @@
 
 ![](/img/progress.png)
 
+## Working Endpoints
+
+- Get All - http://localhost:5000/api/v1/jobs/
+- Get by ID - http://localhost:5000/api/v1/jobs/ID_PLACE_HOLDER
+- Create new Job - http://localhost:5000/api/v1/jobs/new
+- Delete by ID - http://localhost:5000/api/v1/jobs/ID_PLACE_HOLDER
+- Update by ID - http://localhost:5000/api/v1/jobs/ID_PLACE_HOLDER
+
 ## Before Participating
 
 - Please view our open source and organization principles before contributing. https://github.com/GitCodeCareer/open-source
@@ -28,6 +36,9 @@ npm run start
 
 To view the frontend go to:
 http://localhost:8080/src/backend/public/
+
+Backend Endpoints:
+http://localhost:5000/api/v1/jobs/
 
 ### How-to-Start Contributing
 

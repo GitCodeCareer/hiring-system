@@ -3,9 +3,13 @@ const apiRouter = require("./routes");
 const { Router } = require('express');
 const morgan = require("morgan");
 const logger = require("./middleware/requestLogger");
+<<<<<<< HEAD
 
 const router = Router();
 
+=======
+const path = require("path");
+>>>>>>> master
 // Init Express
 const app = express();
 app.use(express.json({ extended: false }));
