@@ -2,7 +2,7 @@ const express = require("express");
 const apiRouter = require("./routes");
 const morgan = require("morgan");
 const logger = require("./middleware/requestLogger");
-
+const path = require("path");
 // Init Express
 const app = express();
 app.use(express.json({ extended: false }));
