@@ -18,7 +18,7 @@ render(
     <Route path="/jobs" component={JobsPage} exact />
     <Route path="/apply" component={ApplyPage} />
     <Route path="/" component={JobsPage} exact />
-    <Route path="/admin" component={AdminPanel} exact />
+    <PrivateRoute path="/admin" component={AdminPanel} admin={false} exact />
     <PrivateRoute path="/applicants" component={ApplicantsPage} exact />
   </Router>,
   document.getElementById("root-app")
