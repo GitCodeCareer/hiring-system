@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/global.css";
 import AdminPanel from "./pages/admin.page";
 import ApplicantsPage from "./pages/applicants.page";
+import CreateJob from './pages/createJob.page';
 
 render(
   <Router>
@@ -19,6 +20,7 @@ render(
     <Route path="/" component={JobsPage} exact />
     <Route path="/admin" component={AdminPanel} exact />
     <Route path="/applicants" component={ApplicantsPage} exact />
+    <Route path="/create-job" component={CreateJob} exact />
   </Router>,
   document.getElementById("root-app")
 );
