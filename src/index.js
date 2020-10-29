@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/global.css";
 import AdminPanel from "./pages/admin.page";
 import ApplicantsPage from "./pages/applicants.page";
+import PrivateRoute from "./routing/PrivateRoute";
 
 render(
   <Router>
@@ -18,7 +19,7 @@ render(
     <Route path="/apply" component={ApplyPage} />
     <Route path="/" component={JobsPage} exact />
     <Route path="/admin" component={AdminPanel} exact />
-    <Route path="/applicants" component={ApplicantsPage} exact />
+    <PrivateRoute path="/applicants" component={ApplicantsPage} exact />
   </Router>,
   document.getElementById("root-app")
 );
