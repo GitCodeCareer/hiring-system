@@ -16,49 +16,49 @@ const AdminPanel = ()=>{
                         <thead>
                             <tr className="table-active">
                                 <th scope="col">#</th>
-                                <th scope="col">Job Titel</th>
-                                <th scope="col">Company</th>
-                                <th scope="col">Skills</th>
+                                <th scope="col">Job Listing</th>
+                                <th scope="col">Applicant Name</th>
+                                <th scope="col">Applicant Email</th>
                                 <th scope="col" className="w-25">Actions</th>
                             </tr>
                         </thead>
                     <tbody >
                     <tr >
                         <th scope="row" >1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>Front-end Developer</td>
+                        <td>Tom Jacobs</td>
+                        <td>tjacobs@gmail.com</td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary mr-3">Edit</button>
-                            <button type="button" class="btn btn-secondary mr-3">View</button>
-                            <button type="button" class="btn btn-danger mr-3">Delete</button>
+                            <button type="button" className="btn btn-primary mr-3">Edit</button>
+                            <button type="button" className="btn btn-secondary mr-3">View</button>
+                            <button type="button" className="btn btn-danger mr-3">Delete</button>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td>Full-Stack Developer</td>
+                        <td>Sam Wise</td>
+                        <td>swise-lotr@gmail.com</td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary mr-3">Edit</button>
-                            <button type="button" class="btn btn-secondary mr-3">View</button>
-                            <button type="button" class="btn btn-danger mr-3">Delete</button>
+                            <button type="button" className="btn btn-primary mr-3">Edit</button>
+                            <button type="button" className="btn btn-secondary mr-3">View</button>
+                            <button type="button" className="btn btn-danger mr-3">Delete</button>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
+                        <td>UI/UX Developer</td>
+                        <td>John Smith</td>
+                        <td>jsmith@gmail.com</td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary mr-3">Edit</button>
-                            <button type="button" class="btn btn-secondary mr-3">View</button>
-                            <button type="button" class="btn btn-danger mr-3">Delete</button>
+                            <button type="button" className="btn btn-primary mr-3">Edit</button>
+                            <button type="button" className="btn btn-secondary mr-3">View</button>
+                            <button type="button" className="btn btn-danger mr-3">Delete</button>
                             </div>
                         </td>
                     </tr>
