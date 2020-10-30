@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { render } from "react-dom";
 import { HashRouter as Router, Route } from "react-router-dom";
 import JobsPage from "./pages/jobs.page";
@@ -10,6 +10,7 @@ import "./styles/global.css";
 import AdminPanel from "./pages/admin.page";
 import ApplicantsPage from "./pages/applicants.page";
 import CreateJob from './pages/createJob.page';
+import PrivateRoute from "./routing/PrivateRoute";
 
 render(
   <Router>
