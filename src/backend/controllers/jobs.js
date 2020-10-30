@@ -81,11 +81,11 @@ const listOfJob = [
   },
 ];
 
-module.exports.listJobs = (req, res) => {
+module.exports.listJobs = (req, res, next) => {
   return res.json(listOfJob);
 };
 
-module.exports.getJobById = (req, res) => {
+module.exports.getJobById = (req, res, next) => {
   const { jobId } = req.params;
   if (!jobId) {
     return res.status(400).json({
@@ -101,7 +101,7 @@ module.exports.getJobById = (req, res) => {
   return res.status(200).json(job);
 };
 
-module.exports.createJob = (req, res) => {
+module.exports.createJob = (req, res, next) => {
   const { title, company, location, jobType, date } = req.body;
   if (!title || !company || !location || !jobType || !date) {
     return res.status(400).json({ error: 'Required arguments not sent' });
@@ -112,7 +112,7 @@ module.exports.createJob = (req, res) => {
   res.json(job);
 };
 
-module.exports.editJobById = (req, res) => {
+module.exports.editJobById = (req, res, next) => {
   const { jobId } = req.params;
   const { title, company, location, jobType, date } = req.body;
   if (!jobId) {
