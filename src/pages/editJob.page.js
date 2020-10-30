@@ -1,19 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
-  Jumbotron,
-  Container,
   Card,
+  Form,
+  FormGroup,
+  CardBody,
   CardTitle,
+  Label,
+  FormText,
   CardText,
   Row,
   Col,
-  ButtonToggle,
+  Button,
+  Input,
 } from "reactstrap";
+import { useForm, Controller } from "react-hook-form";
+import Select from "react-select";
+import DatePicker from "react-date-picker";
+
+const skills = [
+  { value: "html", label: "HTML" },
+  { value: "css", label: "CSS" },
+  { value: "js", label: "Javascript" },
+];
+
+const benefits = [
+  { value: "medical", label: "Medical" },
+  { value: "insurance", label: "Insurance" },
+  { value: "loans", label: "Loans" },
+];
+
+const visaSelection = [
+  { value: "yes", label: "Yes" },
+  { value: "no", label: "No" },
+];
 
 const EditJob = () => {
+  const { handleSubmit, watch, errors, control, getValues } = useForm({
+    mode: "all",
+    reValidateMode: "onChange",
+  });
+
+  const [selectedPostDate, setSelectedPostDate] = useState();
+  const watchDate = watch("jobPostDate");
+
+  const onSubmit = (data) => {
+    // code to submit form
+    console.log(data);
+  };
+
   return (
     <div className="container mt-4">
-      <div className="p-1 rounded-top border-bottom" style={style.heading}>
+      <div className="p-1 rounded-top border-bottom" style={styles.heading}>
         <h1 className="text-center">Edit Job</h1>
       </div>
       <div>
@@ -24,7 +61,7 @@ const EditJob = () => {
             </CardTitle>
             <CardText>
               <Row className="mt-2">
-                <Col sm="2">
+                <Col sm="3">
                   <strong>Job Description:</strong>
                 </Col>
                 <Col>
@@ -37,7 +74,7 @@ const EditJob = () => {
                 </Col>
               </Row>
               <Row className="mt-2">
-                <Col sm="2">
+                <Col sm="3">
                   <strong>Skills:</strong>
                 </Col>
                 <Col>
@@ -47,25 +84,25 @@ const EditJob = () => {
                 </Col>
               </Row>
               <Row className="mt-3">
-                <Col sm="2">
+                <Col sm="3">
                   <strong>Company Name:</strong>
                 </Col>
                 <Col>Google.com</Col>
               </Row>
               <Row className="mt-2">
-                <Col sm="2">
+                <Col sm="3">
                   <strong>Job Post Date:</strong>
                 </Col>
                 <Col>Wed Sep 30 2020</Col>
               </Row>
               <Row className="mt-2">
-                <Col sm="2">
+                <Col sm="3">
                   <strong>Work Location:</strong>
                 </Col>
                 <Col>New York</Col>
               </Row>
               <Row className="mt-3">
-                <Col sm="2">
+                <Col sm="3">
                   <strong>Benefits:</strong>
                 </Col>
                 <Col>
@@ -75,7 +112,7 @@ const EditJob = () => {
                 </Col>
               </Row>
               <Row className="mt-3">
-                <Col sm="2">
+                <Col sm="3">
                   <strong>Will sponsor work visa:</strong>
                 </Col>
                 <Col>
@@ -86,16 +123,85 @@ const EditJob = () => {
           </Card>
         </div>
         <div className="mt-4">
-          <Card
-            body
-            className="shadow-sm p-3 mb-5 bg-white rounded border-0 mt-4"
-          >
-            <CardTitle>Special Title Treatment</CardTitle>
-            <CardText>
-              With supporting text below as a natural lead-in to additional
-              content.
-            </CardText>
-            <ButtonToggle>Go somewhere</ButtonToggle>
+          <Card body className="shadow-sm p-3 mb-5 bg-white rounded border-0">
+            <Form onSubmit={handleSubmit(onSubmit)}>
+              <FormGroup>
+                <Controller
+                  as={Input}
+                  type="text"
+                  name="jobTitle"
+                  control={control}
+                  rules={{ required: true }}
+                  placeholder="Enter Job Title"
+                />
+                {errors.jobTitle && (
+                  <span className="error-text">This field is required</span>
+                )}
+              </FormGroup>
+              <FormGroup>
+                <Controller
+                  as={Input}
+                  type="text"
+                  name="jobDesc"
+                  control={control}
+                  rules={{ required: true }}
+                  placeholder="Enter Job Description"
+                />
+                {errors.jobDesc && (
+                  <span className="error-text">This field is required</span>
+                )}
+              </FormGroup>
+              <FormGroup>
+                <Controller
+                  name="skills"
+                  as={Select}
+                  options={skills}
+                  control={control}
+                  rules={{ required: true }}
+                  isMulti
+                  placeholder="Select Skills"
+                />
+                {errors.skills && (
+                  <span className="error-text">This field is required</span>
+                )}
+              </FormGroup>
+              <FormGroup>
+                <Controller
+                  as={Input}
+                  type="text"
+                  name="companyName"
+                  control={control}
+                  rules={{ required: true }}
+                  placeholder="Enter Company Name"
+                />
+                {errors.companyName && (
+                  <span className="error-text">This field is required</span>
+                )}
+              </FormGroup>
+              <FormGroup style={styles.relativeEle}>
+                <Input
+                  type="text"
+                  name="jobPostDateInput"
+                  placeholder="Select Job Post Date"
+                  value={selectedPostDate}
+                />{" "}
+                {errors.jobPostDate && (
+                  <span className="error-text">This field is required</span>
+                )}
+                <Controller
+                  name="jobPostDate"
+                  as={DatePicker}
+                  control={control}
+                  rules={{ required: true }}
+                  maxDate={new Date()}
+                  clearIcon={null}
+                  className="app-date-custom-style"
+                />
+              </FormGroup>
+            </Form>
+            <div className="mx-auto">
+              <Button color="success">Edit Job</Button>
+            </div>
           </Card>
         </div>
       </div>
@@ -103,9 +209,12 @@ const EditJob = () => {
   );
 };
 
-const style = {
+const styles = {
   heading: {
     background: "rgb(223, 232, 226)",
+  },
+  relativeEle: {
+    position: "relative",
   },
 };
 
