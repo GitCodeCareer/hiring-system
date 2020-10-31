@@ -2,14 +2,15 @@
 
 ## Views Progress
 
-![](/img/progress.png)
+![Progress](./img/progress.png)
 
 ## Working Endpoints
+
 - http://localhost:5000/api/v1/jobs/
 
 ## Before Participating
 
-- Please view our open source and organization principles before contributing. https://github.com/GitCodeCareer/open-source
+- Please view our [open source](https://github.com/GitCodeCareer/open-source) and organization principles before contributing.
 - If you have any questions, we’re available via Twitter @gitcodecareer
 
 ## Participating
