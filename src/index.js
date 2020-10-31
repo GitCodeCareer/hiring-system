@@ -9,7 +9,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/global.css";
 import AdminPanel from "./pages/admin.page";
 import ApplicantsPage from "./pages/applicants.page";
-import CreateJob from './pages/createJob.page';
+import CreateJob from "./pages/createJob.page";
+import EditJob from "./pages/editJob.page";
+
+//Add the below component for routes which are to be kept private
 import PrivateRoute from "./routing/PrivateRoute";
 
 render(
@@ -22,6 +25,7 @@ render(
     <Route path="/admin" component={AdminPanel} exact />
     <Route path="/applicants" component={ApplicantsPage} exact />
     <Route path="/create-job" component={CreateJob} exact />
+    <Route path="/edit-job" component={EditJob} />
   </Router>,
   document.getElementById("root-app")
 );
