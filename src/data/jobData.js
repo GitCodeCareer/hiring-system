@@ -7,7 +7,7 @@ export const jobData = {
     { value: "css", label: "CSS" },
   ],
   companyName: "Google.com",
-  jobPostDate: "Date Tue Oct 27 2020",
+  jobPostDate: "Tue Oct 27 2020",
   workLocation: "New York",
   benefits: [{ value: "loans", label: "Loans" }],
   visaSelection: { value: "yes", label: "Yes" },

@@ -82,7 +82,7 @@ const EditJob = () => {
           </Col>
           <Col>
             {skills.map((skill, index) => (
-              <span id={index} class="badge badge-success p-2 mr-2">
+              <span id={index} class="badge badge-danger p-2 mr-2">
                 {skill.label}
               </span>
             ))}
@@ -123,13 +123,13 @@ const EditJob = () => {
             <strong>Will sponsor work visa:</strong>
           </Col>
           <Col>
-            <span class="badge badge-success p-3">{visaSelection.label}</span>
+            <span class="badge badge-dark p-3">{visaSelection.label}</span>
           </Col>
         </Row>
       </CardText>
     </Card>
   );
-
+  console.log(jobTitle.value);
   const formSection = () => (
     <Card>
       <CardBody>
@@ -150,6 +150,7 @@ const EditJob = () => {
           <FormGroup>
             <Controller
               as={Input}
+              type="text"
               name="jobDesc"
               defaultValue={jobDesc}
               placeholder="Job Description"
@@ -258,7 +259,7 @@ const EditJob = () => {
   );
 
   return (
-    <div className="container">
+    <div className="container mt-4 mb-4">
       <div className="p-1 rounded-top border-bottom" style={styles.heading}>
         <h1 className="text-center">Edit Job</h1>
       </div>
