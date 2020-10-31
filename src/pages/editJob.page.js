@@ -5,8 +5,6 @@ import {
   FormGroup,
   CardBody,
   CardTitle,
-  Label,
-  FormText,
   CardText,
   Row,
   Col,
@@ -36,6 +34,7 @@ const visaSelectionOptions = [
 ];
 
 const EditJob = () => {
+  //Data Management
   const { handleSubmit, watch, errors, control, getValues } = useForm();
   const [selectedPostDate, setSelectedPostDate] = useState();
   const watchDate = watch("jobPostDate");
@@ -49,7 +48,7 @@ const EditJob = () => {
   }, [watchDate]);
 
   const onSubmit = (data) => console.log(data);
-
+  //sample data
   const {
     jobTitle,
     jobDesc,
@@ -129,7 +128,8 @@ const EditJob = () => {
       </CardText>
     </Card>
   );
-  console.log(jobTitle.value);
+
+  //Form Section
   const formSection = () => (
     <Card>
       <CardBody>
@@ -195,6 +195,7 @@ const EditJob = () => {
               name="jobPostDateInput"
               placeholder="Job Post Date"
               defaultValue={jobPostDate}
+              value={selectedPostDate}
             />
             <Controller
               name="jobPostDate"
@@ -258,6 +259,7 @@ const EditJob = () => {
     </Card>
   );
 
+  //Render
   return (
     <div className="container mt-4 mb-4">
       <div className="p-1 rounded-top border-bottom" style={styles.heading}>
@@ -274,6 +276,7 @@ const EditJob = () => {
   );
 };
 
+//Custom Styles
 const styles = {
   heading: {
     background: "rgb(223, 232, 226)",
