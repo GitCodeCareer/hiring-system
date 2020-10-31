@@ -16,253 +16,259 @@ import {
 import { useForm, Controller } from "react-hook-form";
 import Select from "react-select";
 import DatePicker from "react-date-picker";
+import { jobData } from "../data/jobData";
 
-const skills = [
+const skillOptions = [
   { value: "html", label: "HTML" },
   { value: "css", label: "CSS" },
   { value: "js", label: "Javascript" },
 ];
 
-const benefits = [
+const benefitOptions = [
   { value: "medical", label: "Medical" },
   { value: "insurance", label: "Insurance" },
   { value: "loans", label: "Loans" },
 ];
 
-const visaSelection = [
+const visaSelectionOptions = [
   { value: "yes", label: "Yes" },
   { value: "no", label: "No" },
 ];
 
 const EditJob = () => {
-  const { handleSubmit, watch, errors, control, getValues } = useForm({
-    mode: "all",
-    reValidateMode: "onChange",
-  });
-
+  const { handleSubmit, watch, errors, control, getValues } = useForm();
   const [selectedPostDate, setSelectedPostDate] = useState();
   const watchDate = watch("jobPostDate");
 
-  const onSubmit = (data) => {
-    // code to submit form
-    console.log(data);
-  };
+  useEffect(() => {
+    if (!getValues("jobPostDate")) {
+      return;
+    }
+    const selectedDate = new Date(getValues("jobPostDate"));
+    setSelectedPostDate(selectedDate.toDateString());
+  }, [watchDate]);
+
+  const onSubmit = (data) => console.log(data);
+
+  const {
+    jobTitle,
+    jobDesc,
+    jobPostDate,
+    workLocation,
+    visaSelection,
+    skills,
+    benefits,
+    companyName,
+  } = jobData;
+
+  //Display output
+  const displaySection = () => (
+    <Card body className="shadow-sm p-3 mb-5 bg-white rounded border-0">
+      <CardTitle className="text-center">
+        <h3>Job Title: {jobTitle}</h3>
+      </CardTitle>
+      <CardText>
+        <Row className="mt-2">
+          <Col sm="3">
+            <strong>Job Description:</strong>
+          </Col>
+          <Col>
+            <p>{jobDesc}</p>
+          </Col>
+        </Row>
+        <Row className="mt-2">
+          <Col sm="3">
+            <strong>Skills:</strong>
+          </Col>
+          <Col>
+            {skills.map((skill, index) => (
+              <span id={index} class="badge badge-success p-2 mr-2">
+                {skill.label}
+              </span>
+            ))}
+          </Col>
+        </Row>
+        <Row className="mt-3">
+          <Col sm="3">
+            <strong>Company Name:</strong>
+          </Col>
+          <Col>{companyName}</Col>
+        </Row>
+        <Row className="mt-2">
+          <Col sm="3">
+            <strong>Job Post Date:</strong>
+          </Col>
+          <Col>{jobPostDate}</Col>
+        </Row>
+        <Row className="mt-2">
+          <Col sm="3">
+            <strong>Work Location:</strong>
+          </Col>
+          <Col>{workLocation}</Col>
+        </Row>
+        <Row className="mt-3">
+          <Col sm="3">
+            <strong>Benefits:</strong>
+          </Col>
+          <Col>
+            {benefits.map((benefit, index) => (
+              <span key={index} class="badge badge-warning p-2 mr-2">
+                {benefit.label}
+              </span>
+            ))}
+          </Col>
+        </Row>
+        <Row className="mt-3">
+          <Col sm="3">
+            <strong>Will sponsor work visa:</strong>
+          </Col>
+          <Col>
+            <span class="badge badge-success p-3">{visaSelection.label}</span>
+          </Col>
+        </Row>
+      </CardText>
+    </Card>
+  );
+
+  const formSection = () => (
+    <Card>
+      <CardBody>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <FormGroup>
+            <Controller
+              as={Input}
+              defaultValue={jobTitle}
+              name="jobTitle"
+              placeholder="Job Title"
+              control={control}
+              rules={{ required: true }}
+            />
+            {errors.jobTitle && (
+              <span className="error-text">This field is required</span>
+            )}
+          </FormGroup>
+          <FormGroup>
+            <Controller
+              as={Input}
+              name="jobDesc"
+              defaultValue={jobDesc}
+              placeholder="Job Description"
+              control={control}
+              rules={{ required: true }}
+            />
+            {errors.jobDesc && (
+              <span className="error-text">This field is required</span>
+            )}
+          </FormGroup>
+          <FormGroup>
+            <Controller
+              as={Select}
+              control={control}
+              defaultValue={skills}
+              isMulti
+              name="skills"
+              options={skillOptions}
+              className="basic-multi-select"
+              classNamePrefix="select"
+              rules={{ required: true }}
+            />
+            {errors.skills && (
+              <span className="error-text">This field is required</span>
+            )}
+          </FormGroup>
+          <FormGroup>
+            <Controller
+              as={Input}
+              control={control}
+              defaultValue={companyName}
+              name="companyName"
+              placeholder="Company Name"
+              rules={{ required: true }}
+            />
+            {errors.companyName && (
+              <span className="error-text">This field is required</span>
+            )}
+          </FormGroup>
+          <FormGroup style={styles.relativeEle}>
+            <Input
+              name="jobPostDateInput"
+              placeholder="Job Post Date"
+              defaultValue={jobPostDate}
+            />
+            <Controller
+              name="jobPostDate"
+              as={DatePicker}
+              control={control}
+              rules={{ required: true }}
+              maxDate={new Date()}
+              clearIcon={null}
+              className="app-date-custom-style"
+            />
+            {errors.jobPostDate && (
+              <span className="error-text">This field is required</span>
+            )}
+          </FormGroup>
+          <FormGroup>
+            <Controller
+              as={Input}
+              control={control}
+              defaultValue={workLocation}
+              name="workLocation"
+              placeholder="Work Location"
+              rules={{ required: true }}
+            />
+            {errors.workLocation && (
+              <span className="error-text">This field is required</span>
+            )}
+          </FormGroup>
+          <FormGroup>
+            <Controller
+              as={Select}
+              control={control}
+              isMulti
+              options={benefitOptions}
+              name="benefits"
+              defaultValue={benefits}
+              rules={{ required: true }}
+            />
+            {errors.benefits && (
+              <span className="error-text">This field is required</span>
+            )}
+          </FormGroup>
+          <FormGroup>
+            <Controller
+              as={Select}
+              name="workVisa"
+              defaultValue={visaSelection}
+              options={visaSelectionOptions}
+              control={control}
+              rules={{ required: true }}
+              placeholder="Will Sponsor Work Visa"
+            />
+            {errors.workVisa && (
+              <span className="error-text">This field is required</span>
+            )}
+          </FormGroup>
+          <Button color="success" className="mx-auto p-2">
+            Edit Job
+          </Button>
+        </Form>
+      </CardBody>
+    </Card>
+  );
 
   return (
     <div className="container">
       <div className="p-1 rounded-top border-bottom" style={styles.heading}>
         <h1 className="text-center">Edit Job</h1>
       </div>
-
-      <div className="mt-4">
-        <Card body className="shadow-sm p-3 mb-5 bg-white rounded border-0">
-          <CardTitle className="text-center">
-            <h3>Job Title: Senior Developer</h3>
-          </CardTitle>
-          <CardText>
-            <Row className="mt-2">
-              <Col sm="3">
-                <strong>Job Description:</strong>
-              </Col>
-              <Col>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </Col>
-            </Row>
-            <Row className="mt-2">
-              <Col sm="3">
-                <strong>Skills:</strong>
-              </Col>
-              <Col>
-                <span class="badge badge-danger p-2 mr-2">Javascript</span>
-                <span class="badge badge-primary p-2 mr-2">HTML</span>
-                <span class="badge badge-success p-2">CSS</span>
-              </Col>
-            </Row>
-            <Row className="mt-3">
-              <Col sm="3">
-                <strong>Company Name:</strong>
-              </Col>
-              <Col>Google.com</Col>
-            </Row>
-            <Row className="mt-2">
-              <Col sm="3">
-                <strong>Job Post Date:</strong>
-              </Col>
-              <Col>Wed Sep 30 2020</Col>
-            </Row>
-            <Row className="mt-2">
-              <Col sm="3">
-                <strong>Work Location:</strong>
-              </Col>
-              <Col>New York</Col>
-            </Row>
-            <Row className="mt-3">
-              <Col sm="3">
-                <strong>Benefits:</strong>
-              </Col>
-              <Col>
-                <span class="badge badge-warning p-2 mr-2">Insurance</span>
-                <span class="badge badge-info p-2 mr-2">Medical</span>
-                <span class="badge badge-secondary p-2">Loan</span>
-              </Col>
-            </Row>
-            <Row className="mt-3">
-              <Col sm="3">
-                <strong>Will sponsor work visa:</strong>
-              </Col>
-              <Col>
-                <span class="badge badge-success p-3">Yes</span>
-              </Col>
-            </Row>
-          </CardText>
-        </Card>
-      </div>
+      {/* Display Section */}
+      <div className="mt-4">{displaySection()}</div>
       {/* End of Section */}
 
       {/* Form Section */}
-
-      <div className="mt-4">
-        <div className="create-job-container" style={styles.pageContainer}>
-          <div>
-            <Card style={styles.cardContainer}>
-              <CardBody>
-                <CardTitle style={styles.section}>
-                  <h3> Create New Job</h3>
-                </CardTitle>
-                <Form
-                  style={styles.formContainer}
-                  onSubmit={handleSubmit(onSubmit)}
-                >
-                  <FormGroup>
-                    <Controller
-                      as={Input}
-                      type="text"
-                      name="jobTitle"
-                      control={control}
-                      rules={{ required: true }}
-                      placeholder="Enter Job Title"
-                    />
-                    {errors.jobTitle && (
-                      <span className="error-text">This field is required</span>
-                    )}
-                  </FormGroup>
-                  <FormGroup>
-                    <Controller
-                      as={Input}
-                      type="text"
-                      name="jobDesc"
-                      control={control}
-                      rules={{ required: true }}
-                      placeholder="Enter Job Description"
-                    />
-                    {errors.jobDesc && (
-                      <span className="error-text">This field is required</span>
-                    )}
-                  </FormGroup>
-                  <FormGroup>
-                    <Controller
-                      name="skills"
-                      as={Select}
-                      options={skills}
-                      control={control}
-                      rules={{ required: true }}
-                      isMulti
-                      placeholder="Select Skills"
-                    />
-                    {errors.skills && (
-                      <span className="error-text">This field is required</span>
-                    )}
-                  </FormGroup>
-                  <FormGroup>
-                    <Controller
-                      as={Input}
-                      type="text"
-                      name="companyName"
-                      control={control}
-                      rules={{ required: true }}
-                      placeholder="Enter Company Name"
-                    />
-                    {errors.companyName && (
-                      <span className="error-text">This field is required</span>
-                    )}
-                  </FormGroup>
-                  <FormGroup style={styles.relativeEle}>
-                    <Input
-                      type="text"
-                      name="jobPostDateInput"
-                      placeholder="Select Job Post Date"
-                      value={selectedPostDate}
-                    />
-                    {errors.jobPostDate && (
-                      <span className="error-text">This field is required</span>
-                    )}
-                    <Controller
-                      name="jobPostDate"
-                      as={DatePicker}
-                      control={control}
-                      rules={{ required: true }}
-                      maxDate={new Date()}
-                      clearIcon={null}
-                      className="app-date-custom-style"
-                    />
-                  </FormGroup>
-                  <FormGroup>
-                    <Controller
-                      as={Input}
-                      type="text"
-                      name="workLocation"
-                      control={control}
-                      rules={{ required: true }}
-                      placeholder="Enter Work Location"
-                    />
-                    {errors.workLocation && (
-                      <span className="error-text">This field is required</span>
-                    )}
-                  </FormGroup>
-                  <FormGroup>
-                    <Controller
-                      name="benefits"
-                      as={Select}
-                      options={benefits}
-                      control={control}
-                      rules={{ required: true }}
-                      placeholder="Select Benefits"
-                      isMulti
-                    />
-                    {errors.benefits && (
-                      <span className="error-text">This field is required</span>
-                    )}
-                  </FormGroup>
-                  <FormGroup>
-                    <Controller
-                      name="workVisa"
-                      as={Select}
-                      options={visaSelection}
-                      control={control}
-                      rules={{ required: true }}
-                      placeholder="Will Sponsor Work Visa"
-                    />
-                    {errors.workVisa && (
-                      <span className="error-text">This field is required</span>
-                    )}
-                  </FormGroup>
-
-                  <div style={styles.section}>
-                    <Button type="submit" variant="success" color="success">
-                      Edit Job
-                    </Button>
-                  </div>
-                </Form>
-              </CardBody>
-            </Card>
-          </div>
-        </div>
-      </div>
+      <div className="mt-4 edit-job-container">{formSection()}</div>
+      {/* End of Section */}
     </div>
   );
 };
@@ -273,24 +279,6 @@ const styles = {
   },
   relativeEle: {
     position: "relative",
-  },
-  pageContainer: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-  },
-  section: {
-    display: "flex",
-    justifyContent: "center",
-    margin: "0",
-  },
-  cardContainer: {
-    width: "500px",
-    padding: "0 30px",
-  },
-  formContainer: {
-    margin: "20px 0",
   },
 };
 

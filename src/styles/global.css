@@ -12,7 +12,9 @@
 .create-job-container .react-date-picker__wrapper {
   opacity: 0;
 }
-
+.edit-job-container .react-date-picker__wrapper {
+  opacity: 0;
+}
 .error-text {
   color: red;
   font-size: 12px;
