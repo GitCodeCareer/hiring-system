@@ -1,0 +1,19 @@
+.text-tiny {
+  font-size: 12px;
+}
+
+.app-date-custom-style {
+  width: 100%;
+  position: absolute !important;
+  top: 0;
+  z-index: 1000;
+}
+
+.create-job-container .react-date-picker__wrapper {
+  opacity: 0;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}
