@@ -21,6 +21,7 @@ import PrivateRouteComponent from "./components/PrivateRoute.component";
 // import PrivateRoute from "./routing/PrivateRoute";
 
 const App = () => {
+  console.log(process.env.REACT_APP_X);
   return (
     <Router>
       {/* <Route path="/login" component={LoginPage} exact />
@@ -50,8 +51,8 @@ const App = () => {
 
 ReactDOM.render(
   <Auth0Provider
-    domain="dev-s0xqstyv.eu.auth0.com"
-    clientId="roPCql0jMSuWIZ6hWwYXYW053xUVrcg4"
+    domain={process.env.REACT_APP_DOMAIN}
+    clientId={process.env.REACT_APP_CLIENT_ID}
     redirectUri={window.location.origin}
     cacheLocation="localstorage"
   >
