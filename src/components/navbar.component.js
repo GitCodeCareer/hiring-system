@@ -12,6 +12,11 @@ import {
 
 import logo from "../assets/logo.png";
 import "../assets/styles/main.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab, faGithub } from "@fortawesome/free-brands-svg-icons";
+
+library.add(fab, faGithub);
 
 class NavbarComponent extends Component {
   constructor(props) {
@@ -39,19 +44,25 @@ class NavbarComponent extends Component {
           </NavbarBrand>
           <NavbarToggler onClick={() => this.toggle()} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className="mr-auto" navbar>
+            <Nav navbar className="navbar-nav w-100 d-flex justify-content-end">
               <NavItem>
                 <NavLink href="https://github.com/GitCodeCareer/hacktoberfest--hiring-system">
-                  GitHub
+                  <FontAwesomeIcon icon={["fab", "github"]} />
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink tag={Link} to="/register">
+                  Register
+                </NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink tag={Link} to="/login">
+                  Login
                 </NavLink>
               </NavItem>
             </Nav>
-            <NavLink tag={Link} to="/register">
-              Register
-            </NavLink>
-            <NavLink tag={Link} to="/login">
-              Login
-            </NavLink>
 
             {this.state.isAuthenticated && (
               <NavLink tag={Link} to="/admin">
