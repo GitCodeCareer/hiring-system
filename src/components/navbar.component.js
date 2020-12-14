@@ -34,6 +34,10 @@ const NavbarComponent = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggle = () => setDropdownOpen((prevState) => !prevState);
+  const openNav = () => {
+    console.log("clicked");
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Navbar light expand="md">
@@ -41,8 +45,8 @@ const NavbarComponent = () => {
         <img src={logo} width="30" height="30" alt="" />
         <span className="ml-2 title">Hiring Job System</span>
       </NavbarBrand>
-      <NavbarToggler onClick={() => setIsOpen(!isOpen)} />
-      <Collapse navbar>
+      <NavbarToggler onClick={openNav} />
+      <Collapse isOpen={isOpen} navbar>
         <Nav navbar className="navbar-nav w-100 d-flex justify-content-end">
           <NavItem>
             <NavLink href="https://github.com/GitCodeCareer/hacktoberfest--hiring-system">
@@ -70,7 +74,7 @@ const NavbarComponent = () => {
               <Media left href="#">
                 <Media
                   object
-                  width="25px"
+                  width="20px"
                   src={user.picture}
                   alt={user.name}
                   className="rounded-circle mr-2"
