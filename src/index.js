@@ -33,15 +33,15 @@ const App = () => {
         <AdminPanel />
       </PrivateRouteComponent>
 
-      <PrivateRouteComponent path="hire/applicants" exact>
+      <PrivateRouteComponent path="/hire/applicants" exact>
         <ApplicantsPage />
       </PrivateRouteComponent>
 
-      <PrivateRouteComponent path="hire/new" exact>
+      <PrivateRouteComponent path="/hire/new" exact>
         <CreateJob />
       </PrivateRouteComponent>
 
-      <PrivateRouteComponent path="hire/:jobid" exact>
+      <PrivateRouteComponent path="/hire/:jobid" exact>
         <EditJob />
       </PrivateRouteComponent>
     </Router>
