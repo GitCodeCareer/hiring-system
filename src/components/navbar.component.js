@@ -61,14 +61,13 @@ const NavbarComponent = () => {
             {isAuthenticated || (
               <>
                 <NavItem>
-                  <NavLink tag={Link} to="/register">
-                    Register
-                  </NavLink>
-                </NavItem>
-
-                <NavItem>
                   <NavLink>
-                    <button onClick={loginWithRedirect}>Sign in</button>
+                    <button
+                      onClick={loginWithRedirect}
+                      className="btn btn-signin p-0 text-primary"
+                    >
+                      Sign in
+                    </button>
                   </NavLink>
                 </NavItem>
               </>
