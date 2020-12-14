@@ -1,6 +1,11 @@
 import React from "react";
-import { render } from "react-dom";
+// import { render } from "react-dom";
+import ReactDOM from "react-dom";
+
 import { HashRouter as Router, Route } from "react-router-dom";
+
+import { Auth0Provider } from "@auth0/auth0-react";
+
 import JobsPage from "./pages/jobs.page";
 import LoginPage from "./pages/login.page";
 import RegisterPage from "./pages/register.page";
@@ -15,17 +20,20 @@ import EditJob from "./pages/editJob.page";
 //Add the below component for routes which are to be kept private
 import PrivateRoute from "./routing/PrivateRoute";
 
-render(
-  <Router>
-    <Route path="/login" component={LoginPage} exact />
-    <Route path="/register" component={RegisterPage} exact />
-    <Route path="/jobs" component={JobsPage} exact />
-    <Route path="/apply" component={ApplyPage} />
-    <Route path="/" component={JobsPage} exact />
-    <Route path="/admin" component={AdminPanel} exact />
-    <Route path="/applicants" component={ApplicantsPage} exact />
-    <Route path="/create-job" component={CreateJob} exact />
-    <Route path="/edit-job" component={EditJob} />
-  </Router>,
-  document.getElementById("root-app")
-);
+const App = () => {
+  return (
+    <Router>
+      <Route path="/login" component={LoginPage} exact />
+      <Route path="/register" component={RegisterPage} exact />
+      <Route path="/jobs" component={JobsPage} exact />
+      <Route path="/apply" component={ApplyPage} />
+      <Route path="/" component={JobsPage} exact />
+      <Route path="/admin" component={AdminPanel} exact />
+      <Route path="/applicants" component={ApplicantsPage} exact />
+      <Route path="/create-job" component={CreateJob} exact />
+      <Route path="/edit-job" component={EditJob} />
+    </Router>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root-app"));
