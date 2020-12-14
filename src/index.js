@@ -17,6 +17,7 @@ import ApplicantsPage from "./pages/applicants.page";
 import CreateJob from "./pages/createJob.page";
 import EditJob from "./pages/editJob.page";
 
+import PrivateRouteComponent from "./components/PrivateRoute.component";
 //Add the below component for routes which are to be kept private
 import PrivateRoute from "./routing/PrivateRoute";
 
@@ -28,10 +29,20 @@ const App = () => {
       <Route path="/jobs" component={JobsPage} exact />
       <Route path="/apply" component={ApplyPage} />
       <Route path="/" component={JobsPage} exact />
-      <Route path="/admin" component={AdminPanel} exact />
-      <Route path="/applicants" component={ApplicantsPage} exact />
-      <Route path="/create-job" component={CreateJob} exact />
-      <Route path="/edit-job" component={EditJob} />
+
+      <PrivateRouteComponent path="/admin" exact>
+        <AdminPanel />
+      </PrivateRouteComponent>
+
+      <PrivateRouteComponent path="hire/applicants" exact>
+        <ApplicantsPage />
+      </PrivateRouteComponent>
+      <PrivateRouteComponent path="hire/new" exact>
+        <CreateJob />
+      </PrivateRouteComponent>
+      <PrivateRouteComponent path="hire/:jobid" exact>
+        <EditJob />
+      </PrivateRouteComponent>
     </Router>
   );
 };
