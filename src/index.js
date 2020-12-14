@@ -36,4 +36,13 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root-app"));
+ReactDOM.render(
+  <Auth0Provider
+    domain="dev-s0xqstyv.eu.auth0.com"
+    clientId="roPCql0jMSuWIZ6hWwYXYW053xUVrcg4"
+    redirectUri={window.location.origin}
+  >
+    <App />
+  </Auth0Provider>,
+  document.getElementById("root-app")
+);
