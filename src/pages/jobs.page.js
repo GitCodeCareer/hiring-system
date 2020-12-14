@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Container, ListGroup, ListGroupItem, Input } from 'reactstrap';
-import Navbar from '../components/navbar.component';
-import { listOfJob } from '../data/jobs';
+import React, { Component } from "react";
+import { Button, Container, ListGroup, ListGroupItem, Input } from "reactstrap";
+import Navbar from "../components/navbar.component";
+import { listOfJob } from "../data/jobs";
 
 class HomePage extends Component {
   constructor(props) {
@@ -52,7 +51,7 @@ class HomePage extends Component {
               />
             </div>
           </div>
-          {jobs.length == 0 && (
+          {jobs.length === 0 && (
             <h3 className="text-center mt-5">No result found</h3>
           )}
           <ListGroup className="mt-3">
