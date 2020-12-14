@@ -15,3 +15,8 @@ body {
   font-size: 0.8rem;
   font-weight: bold;
 }
+.btn-signin {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: none !important;
+}

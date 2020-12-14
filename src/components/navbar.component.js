@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 import {
   Collapse,
+  Media,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
   NavLink,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
 } from "reactstrap";
 
 import { useAuth0 } from "@auth0/auth0-react";
@@ -22,8 +28,20 @@ library.add(fab, faGithub);
 
 const NavbarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const {
+    isLoading,
 
+    isAuthenticated,
+    error,
+    user,
+    loginWithRedirect,
+    logout,
+  } = useAuth0();
   // const { isOpen } = this.state;
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggle = () => setDropdownOpen((prevState) => !prevState);
   return (
     <>
       <Navbar light expand="md">
@@ -40,24 +58,81 @@ const NavbarComponent = () => {
               </NavLink>
             </NavItem>
 
-            <NavItem>
-              <NavLink tag={Link} to="/register">
-                Register
-              </NavLink>
-            </NavItem>
+            {isAuthenticated || (
+              <>
+                <NavItem>
+                  <NavLink tag={Link} to="/register">
+                    Register
+                  </NavLink>
+                </NavItem>
 
-            <NavItem>
-              <NavLink tag={Link} to="/login">
-                Login
-              </NavLink>
-            </NavItem>
+                <NavItem>
+                  <NavLink>
+                    <button onClick={loginWithRedirect}>Sign in</button>
+                  </NavLink>
+                </NavItem>
+              </>
+            )}
+
+            {isAuthenticated && (
+              <>
+                {/* <NavLink tag={Link} to="/admin">
+                  Admin | profile image
+                </NavLink> */}
+
+                <Media className="d-flex align-items-center">
+                  <Media left href="#">
+                    <Media
+                      object
+                      width="25px"
+                      src={user.picture}
+                      alt={user.name}
+                      className="rounded-circle mr-2"
+                    />
+                  </Media>
+                  <Media body>
+                    <Media heading className="h6 mb-0 mr-1">
+                      <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                        <DropdownToggle caret className="btn-signin">
+                          {user.name}
+                        </DropdownToggle>
+                        <DropdownMenu>
+                          <DropdownItem header>Admin</DropdownItem>
+                          <DropdownItem>
+                            <Link to="/admin">Admin page</Link>
+                          </DropdownItem>
+                          <DropdownItem divider />
+                          <DropdownItem header>Jobs</DropdownItem>
+                          <DropdownItem>
+                            <Link to="/create-job">Create Jobs</Link>
+                          </DropdownItem>
+
+                          <DropdownItem divider />
+
+                          <DropdownItem
+                            onClick={() =>
+                              logout({ returnTo: window.location.origin })
+                            }
+                          >
+                            Logout
+                          </DropdownItem>
+                        </DropdownMenu>
+                      </Dropdown>
+                    </Media>
+                    {/* {user.email} */}
+                  </Media>
+                </Media>
+
+                {/* <NavItem>
+                  <button
+                    onClick={() => logout({ returnTo: window.location.origin })}
+                  >
+                    Log Out
+                  </button>
+                </NavItem> */}
+              </>
+            )}
           </Nav>
-
-          {/* {this.state.isAuthenticated && (
-            <NavLink tag={Link} to="/admin">
-              Admin
-            </NavLink>
-          )} */}
         </Collapse>
       </Navbar>
     </>
