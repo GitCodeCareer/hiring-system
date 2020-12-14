@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -8,11 +8,10 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from 'reactstrap';
+} from "reactstrap";
+
+import logo from "../assets/logo.png";
+import "../assets/styles/main.css";
 
 class NavbarComponent extends Component {
   constructor(props) {
@@ -25,15 +24,19 @@ class NavbarComponent extends Component {
   toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen,
+      isAuthenticated: false,
     });
   };
 
   render = () => {
     const { isOpen } = this.state;
     return (
-      <div>
-        <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/">Hiring Job System</NavbarBrand>
+      <>
+        <Navbar light expand="md">
+          <NavbarBrand href="/">
+            <img src={logo} width="30" height="30" alt="" />
+            <span className="ml-2 title">Hiring Job System</span>
+          </NavbarBrand>
           <NavbarToggler onClick={() => this.toggle()} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
@@ -42,17 +45,6 @@ class NavbarComponent extends Component {
                   GitHub
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Menu
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
             <NavLink tag={Link} to="/register">
               Register
@@ -60,12 +52,15 @@ class NavbarComponent extends Component {
             <NavLink tag={Link} to="/login">
               Login
             </NavLink>
-            <NavLink tag={Link} to="/admin">
-              Admin
-            </NavLink>
+
+            {this.state.isAuthenticated && (
+              <NavLink tag={Link} to="/admin">
+                Admin
+              </NavLink>
+            )}
           </Collapse>
         </Navbar>
-      </div>
+      </>
     );
   };
 }
