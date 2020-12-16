@@ -1,0 +1,22 @@
+:root {
+  --nav-bg: #fff;
+  --body-bg: #fafafb;
+}
+body {
+  background-color: var(--body-bg) !important;
+}
+
+.navbar {
+  background-color: var(--nav-bg) !important;
+  border-bottom: 1px solid #efefef;
+}
+
+.title {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.btn-signin {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: none !important;
+}
