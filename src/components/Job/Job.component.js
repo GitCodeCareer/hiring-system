@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+
 import PropTypes from "prop-types";
 
 import moment from "moment";
+
 import {
   Badge,
   Dropdown,
@@ -10,14 +12,16 @@ import {
   DropdownItem,
   ListGroupItem,
 } from "reactstrap";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBan,
   faEllipsisV,
   faMapMarkerAlt,
-  faBan,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+
 import "../Job/job.styles.css";
 
 const Job = ({ job }) => {
