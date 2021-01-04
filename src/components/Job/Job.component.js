@@ -1,5 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+
+import moment from "moment";
+
 import { Badge, ListGroupItem } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
@@ -22,8 +25,12 @@ const Job = ({ job }) => {
     <ListGroupItem className="job-card" tag="a" href={jobApplyURL} key={userId}>
       <div className="d-flex flex-column">
         <div className="job-card--header mb-3">
-          <img className="job-image" src={jobCreatorLogo} alt={jobCreator} />
-          <span className="text-tiny">{dateModified}</span>
+          <img
+            className="job-image mr-4"
+            src={jobCreatorLogo}
+            alt={jobCreator}
+          />
+          <span className="text-tiny ">{moment(dateModified).fromNow()}</span>
           <span className="drop-down-icon">
             <FontAwesomeIcon icon={faEllipsisV} />
           </span>
