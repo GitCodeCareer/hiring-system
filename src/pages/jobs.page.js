@@ -20,7 +20,8 @@ const HomePage = () => {
     if (e.target.value.length >= 3) {
       filterWithPropery(e.target.name, e.target.value);
     } else {
-      // need to put old jobs into local storage then retrieve after filter canceled
+      // This will be a problem later where jobs are lost and then needed later
+      // huge network hit
       setJobs(listOfJob);
     }
   };
@@ -30,7 +31,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Navbar />
       <Container className="mt-4 mb-4">
         <h1>List of available jobs</h1>
@@ -61,7 +62,7 @@ const HomePage = () => {
           ))}
         </ListGroup>
       </Container>
-    </div>
+    </>
   );
 };
 

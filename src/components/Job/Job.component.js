@@ -46,46 +46,33 @@ const Job = ({ job }) => {
       <div className="d-flex flex-column">
         <div className="job-card--header mb-3">
           {jobCreatorLogo ? (
-            <>
-              <img
-                className="job-image"
-                src={jobCreatorLogo}
-                alt={jobCreator}
-              />
-              <span className="text-tiny job-time">
-                {moment(dateModified).fromNow()}
-              </span>
-
-              <Dropdown
-                className="drop-down-icon"
-                isOpen={dropdownOpen}
-                toggle={toggle}
-              >
-                <DropdownToggle>
-                  <FontAwesomeIcon icon={faEllipsisV} />
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    <FontAwesomeIcon icon={faHeart} className="mr-1" /> Save Job
-                  </DropdownItem>
-                  <DropdownItem text>
-                    <FontAwesomeIcon icon={faBan} className="mr-2" />
-                    Not Interested
-                  </DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-            </>
+            <img className="job-image" src={jobCreatorLogo} alt={jobCreator} />
           ) : (
-            <>
-              <h3 className="company mr-4">{jobCreator}</h3>
-              <span className="text-tiny job-time">
-                {moment(dateModified).fromNow()}
-              </span>
-              <span className="drop-down-icon">
-                <FontAwesomeIcon icon={faEllipsisV} />
-              </span>
-            </>
+            <h3 className="company mr-4">{jobCreator}</h3>
           )}
+
+          <span className="text-tiny job-time">
+            {moment(dateModified).fromNow()}
+          </span>
+
+          <Dropdown
+            className="drop-down-icon"
+            isOpen={dropdownOpen}
+            toggle={toggle}
+          >
+            <DropdownToggle>
+              <FontAwesomeIcon icon={faEllipsisV} />
+            </DropdownToggle>
+            <DropdownMenu right>
+              <DropdownItem>
+                <FontAwesomeIcon icon={faHeart} className="mr-1" /> Save Job
+              </DropdownItem>
+              <DropdownItem>
+                <FontAwesomeIcon icon={faBan} className="mr-2" />
+                Not Interested
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </div>
 
         <div className="mr-auto">
