@@ -26,7 +26,7 @@ const Job = ({ job }) => {
     jobTitle,
     jobCreatorLogo,
     jobLocation,
-    jobApplyURL,
+    // jobApplyURL,
     jobCreator,
     dateModified,
     jobDescription,
@@ -44,11 +44,11 @@ const Job = ({ job }) => {
           {jobCreatorLogo ? (
             <>
               <img
-                className="job-image mr-4"
+                className="job-image"
                 src={jobCreatorLogo}
                 alt={jobCreator}
               />
-              <span className="text-tiny ">
+              <span className="text-tiny job-time">
                 {moment(dateModified).fromNow()}
               </span>
 
@@ -74,7 +74,7 @@ const Job = ({ job }) => {
           ) : (
             <>
               <h3 className="company mr-4">{jobCreator}</h3>
-              <span className="text-tiny">
+              <span className="text-tiny job-time">
                 {moment(dateModified).fromNow()}
               </span>
               <span className="drop-down-icon">
