@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ListGroupItem } from "reactstrap";
+import { Badge, Button, ListGroupItem } from "reactstrap";
+
+import "../Job/job.styles.css";
 
 const Job = ({ job }) => {
   const {
@@ -11,29 +13,33 @@ const Job = ({ job }) => {
     jobApplyURL,
     jobCreator,
     dateModified,
+    jobDescription,
     jobWorkType,
   } = job;
 
   return (
-    <ListGroupItem key={userId}>
-      <div className="d-flex flex-row">
+    <ListGroupItem className="job-card" tag="a" href={jobApplyURL} key={userId}>
+      <div className="d-flex flex-column">
+        <div className="mb-3">
+          <img className="job-image" src={jobCreatorLogo} alt={jobCreator} />
+          <span className="text-tiny">{dateModified}</span>
+          <span>...</span>
+        </div>
         <div className="mr-auto">
-          <h4 className="text-dark">{jobTitle}</h4>
-        </div>
-        <div>
-          <img className="img-fluid" src={jobCreatorLogo} alt={jobCreator} />
-        </div>
-        <div>{jobLocation}</div>
-        <div className="ml-auto">
-          <a href={jobApplyURL} color="primary">
-            See details
-          </a>
+          <h4 className="job-card--title text-dark">{jobTitle}</h4>
+          <h6 className="text-muted">{jobLocation}</h6>
+
+          <p>
+            {jobDescription.replace(/(<([^>]+)>)/gi, "").substring(0, 100)} ...
+          </p>
+          <Badge className="p-2 mt-1 mr-2" color="primary">
+            {jobWorkType}
+          </Badge>
         </div>
       </div>
-      <span className="text-muted">{jobCreator}</span> <br />
-      <span className="text-tiny">
-        {dateModified} - {jobWorkType}
-      </span>
+
+      {/* <span className="text-muted">{jobCreator}</span> */}
+      <br />
     </ListGroupItem>
   );
 };

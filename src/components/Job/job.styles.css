@@ -1,0 +1,23 @@
+.job-image {
+  width: 150px;
+  /* background-color: #efefef; */
+  /* padding: 0.25rem 0; */
+  /* border-radius: 15px; */
+}
+.job-card--title {
+  font-weight: 700;
+}
+.job-card.list-group-item {
+  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+
+  border: 2px solid #ededf0;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  width: 50%;
+
+  color: #000;
+}
+.job-card.list-group-item:hover {
+  text-decoration: none;
+}
