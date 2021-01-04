@@ -6,6 +6,7 @@ import moment from "moment";
 import { Badge, ListGroupItem } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+
 import "../Job/job.styles.css";
 
 const Job = ({ job }) => {
@@ -25,15 +26,31 @@ const Job = ({ job }) => {
     <ListGroupItem className="job-card" tag="a" href={jobApplyURL} key={userId}>
       <div className="d-flex flex-column">
         <div className="job-card--header mb-3">
-          <img
-            className="job-image mr-4"
-            src={jobCreatorLogo}
-            alt={jobCreator}
-          />
-          <span className="text-tiny ">{moment(dateModified).fromNow()}</span>
-          <span className="drop-down-icon">
-            <FontAwesomeIcon icon={faEllipsisV} />
-          </span>
+          {jobCreatorLogo ? (
+            <>
+              <img
+                className="job-image mr-4"
+                src={jobCreatorLogo}
+                alt={jobCreator}
+              />
+              <span className="text-tiny ">
+                {moment(dateModified).fromNow()}
+              </span>
+              <span className="drop-down-icon">
+                <FontAwesomeIcon icon={faEllipsisV} />
+              </span>
+            </>
+          ) : (
+            <>
+              <h3 className="company mr-4">{jobCreator}</h3>
+              <span className="text-tiny">
+                {moment(dateModified).fromNow()}
+              </span>
+              <span className="drop-down-icon">
+                <FontAwesomeIcon icon={faEllipsisV} />
+              </span>
+            </>
+          )}
         </div>
 
         <div className="mr-auto">
@@ -52,8 +69,6 @@ const Job = ({ job }) => {
           </Badge>
         </div>
       </div>
-
-      <br />
     </ListGroupItem>
   );
 };
