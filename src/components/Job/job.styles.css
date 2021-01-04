@@ -18,6 +18,11 @@
 .job-card--header .drop-down-icon {
   float: right;
 }
+.job-card--header .drop-down-icon .btn {
+  border: none;
+  background: none;
+  color: #000;
+}
 
 .job-card--header .company {
   border-radius: 7px;

@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import moment from "moment";
-
-import { Badge, ListGroupItem } from "reactstrap";
+import {
+  Badge,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  ListGroupItem,
+} from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsisV, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEllipsisV,
+  faMapMarkerAlt,
+  faBan,
+} from "@fortawesome/free-solid-svg-icons";
 
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import "../Job/job.styles.css";
 
 const Job = ({ job }) => {
@@ -22,8 +33,12 @@ const Job = ({ job }) => {
     jobWorkType,
   } = job;
 
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggle = () => setDropdownOpen((prevState) => !prevState);
+
   return (
-    <ListGroupItem className="job-card" tag="a" href={jobApplyURL} key={userId}>
+    <ListGroupItem className="job-card" key={userId}>
       <div className="d-flex flex-column">
         <div className="job-card--header mb-3">
           {jobCreatorLogo ? (
@@ -36,9 +51,25 @@ const Job = ({ job }) => {
               <span className="text-tiny ">
                 {moment(dateModified).fromNow()}
               </span>
-              <span className="drop-down-icon">
-                <FontAwesomeIcon icon={faEllipsisV} />
-              </span>
+
+              <Dropdown
+                className="drop-down-icon"
+                isOpen={dropdownOpen}
+                toggle={toggle}
+              >
+                <DropdownToggle>
+                  <FontAwesomeIcon icon={faEllipsisV} />
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    <FontAwesomeIcon icon={faHeart} className="mr-1" /> Save Job
+                  </DropdownItem>
+                  <DropdownItem text>
+                    <FontAwesomeIcon icon={faBan} className="mr-2" />
+                    Not Interested
+                  </DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
             </>
           ) : (
             <>
