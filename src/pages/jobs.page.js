@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, ListGroup, ListGroupItem, Input } from "reactstrap";
+import { Container, ListGroup, Input } from "reactstrap";
 import Navbar from "../components/navbar.component";
 
 import JobCard from "../components/Job/Job.component";
@@ -10,7 +10,7 @@ class HomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      jobs: listOfJob.splice(0, 2),
+      jobs: listOfJob,
     };
     this.handleChange = this.handleChange.bind(this);
     this.filterWithPropery = this.filterWithPropery.bind(this);
@@ -18,6 +18,7 @@ class HomePage extends Component {
 
   filterWithPropery(properyName, value) {
     let filteredJobs = this.state.jobs.filter((item) => {
+      console.log(item);
       return item[properyName].toLowerCase().includes(value.toLowerCase());
     });
     this.setState({ jobs: filteredJobs });
@@ -54,38 +55,14 @@ class HomePage extends Component {
               />
             </div>
           </div>
+
           {jobs.length === 0 && (
             <h3 className="text-center mt-5">No result found</h3>
           )}
 
           <ListGroup className="mt-3">
-            {jobs.map((job, index) => (
+            {jobs.map((job) => (
               <JobCard job={job} />
-
-              // <ListGroupItem key={item.userId}>
-              //   <div className="d-flex flex-row">
-              //     <div className="mr-auto">
-              //       <h4 className="text-dark">{item.jobTitle}</h4>
-              //     </div>
-              //     <div>
-              //       <img
-              //         className="img-fluid"
-              //         src={item.jobCreatorLogo}
-              //         alt=""
-              //       />
-              //     </div>
-              //     <div>{item.jobLocation}</div>
-              //     <div className="ml-auto">
-              //       <a href={item.jobApplyURL} color="primary">
-              //         See details
-              //       </a>
-              //     </div>
-              //   </div>
-              //   <span className="text-muted">{item.jobCreator}</span> <br />
-              //   <span className="text-tiny">
-              //     {item.dateModified} - {item.jobWorkType}
-              //   </span>
-              // </ListGroupItem>
             ))}
           </ListGroup>
         </Container>
